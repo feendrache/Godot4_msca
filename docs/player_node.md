@@ -33,4 +33,5 @@ The following layers are "outside" the layer structure provided by the base shee
 ### Notes
 - The visibility of layers is not set within the animations, that needs to be done via code (example: when sitting down in a chair the shadow needs to be hidden)
 - You cannot use the Ramp-Shader in the smaller version, only in the full layered version
-- Some stuff like the position and rotation of the weapons need to be set via code and are not part of the animation itself
+- The created Node contains three scripts that i will explain separatly: [the Player Script/MSCAPlayer](MSCAPlayer.md), [the Movement Script](movement.md), [the SpriteLayers Script/MSCAFarmerSpriteLayers](MSCAFarmerSpriteLayers.md)
+- The documentation is still under construction, will add more info and how-to's with time
