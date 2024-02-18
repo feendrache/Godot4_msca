@@ -23,8 +23,8 @@ I will try to explain the MSCA to you in the following pages:
 - [The JSON explained](/docs/jsons_explained.md)
 - [Explanation of the created Node](/docs/player_node.md)
 - Provided Classes
-  - MSCAPlayer
-  - Movement Class
-  - MSCAFarmerSpriteLayers
-  - MSCAPaletteSwaps
-- The Plaette Swap Shader
+  - [MSCAPlayer](docs/MSCAPlayer.md)
+  - [Movement Class](docs/movement.md)
+  - [MSCAFarmerSpriteLayers](docs/MSCAFarmerSpriteLayers.md)
+  - [MSCAPaletteSwaps](docs/MSCAPaletteSwaps.md)
+- [The Plaette Swap Shader](docs/paletteShader.md)
