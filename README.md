@@ -1,7 +1,10 @@
 # MSCA (Mana Seed Character Animator) for Godot 4
 Welcome to the MSCA for Godot 4. 
 
-!!Please be aware that this plugin is created to work with the newest Version of Godot 4!!
+### Version 0.9.4
+__ still not finished, i'm still working on the animations to get them as i want. __
+
+__ Please be aware that this plugin is created to work with the newest Version of Godot 4 __
 I don't plan to backport any of it to Godot 3, just to let you know.
 
 Currently the following ManaSeed Sprite systems are supported:
