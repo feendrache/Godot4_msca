@@ -14,9 +14,9 @@ The Farmer Sprite System provides a vast range of animations and creating all th
 Next to the creation of the Player (or NPC) Node and all animations the msca also includes a shader, with wich you can use color ramps Seliel provided inside the Sprite System.
 
 I will try to explain the MSCA to you in the following pages:
-- [a relative link](/docs/quickstart.md) How to create the Player Node (quickstart)
-- The JSON explained
-- Explanation of the created Node
+- [How to create the Player Node (quickstart)](/docs/quickstart.md)
+- [The JSON explained](/docs/jsons_explained.md)
+- [Explanation of the created Node](/docs/player_node.md)
 - Provided Classes
   - MSCAPlayer
   - Movement Class
