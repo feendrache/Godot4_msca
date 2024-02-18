@@ -6,6 +6,7 @@ I don't plan to backport any of it to Godot 3, just to let you know.
 
 Currently the following ManaSeed Sprite systems are supported:
 - Farmer Sprite System
+
 The JSON file for the old Character Base is still included, but i haven't implemented it into the MSCA yet, since i only use the Farmer Sprite System right now.
 
 The Farmer Sprite System provides a vast range of animations and creating all these animations inside the animation player of godot is a LOT of work, especially for a layered sprite system, so i created a tool that not only gives you a layered Sprite set up, but also all animations in an animation player and a complete animation tree inside godot. 
