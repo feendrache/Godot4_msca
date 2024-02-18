@@ -6,6 +6,7 @@ __still not finished, i'm still working on the animations to get them as i want.
 
 ### Description
 __Please be aware that this plugin is created to work with the newest Version of Godot 4__
+
 I don't plan to backport any of it to Godot 3, just to let you know.
 
 Currently the following ManaSeed Sprite systems are supported:
