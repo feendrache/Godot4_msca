@@ -42,3 +42,6 @@ Example: Idle will get four animations: IdleDown, IdleUp, IdleLeft, IdleRight. T
 - make_sound: when the animation should emit sound at specific frames
   - frames: on wich frames
   - sound: sound key to be emitted
+
+With all these informations i create the whole Player Node with all animations and layers. 
+take a look at the [pack creator file](../addons/msca/packs/farmer_base.gd) if you want to look at the generator code
