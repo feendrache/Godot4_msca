@@ -1,1 +1,41 @@
+Quick-Start for using the MSCA for Godot
+!!important: this plugin is to use with the newest Version of Godot 4 !!
 
+Now how to use it:
+1. Copy the files to the addons folder in your project, if you don't have one, create a folder called "addons" under then base "res://" of your project
+2. Activate the addon. Open the ProjectSettings (Main-Menu: Project->ProjectSettings->there is a tab called "Addons"->check the checkbox behind the msca
+3. Open the Test.tscn in the "tests" folder inside of the msca folders. 
+This is a really basic scene, it only contains two buttons to switch between run and walk and a camera. 
+4. select the msca in the Top Menu (Next to Script, 2D, etc.)
+6. Select your options
+Character Base Selection: Currently the only option is the FarmerBase but later i will add the HeroBase too. When you look into the folders of the plugin, you will find a "json" folder and a json file called "msca_base_animations" it contains the informations of the animations of the old character base. Since i don't intend to use it anymore i only included my json in this plugin.
+Base Path for Sprites: You can enter the path to your FarmerSprites Folders (needs to be inside the "res" of your project) (inside this folder there needs to be the original folder structure you were given with the Farme Sprite Set) When you enter the folder the MSCA will set the Body Sprite and some other layers for you.
+Use Layered Sprites: With the Customizer you can precreate already clothed Spritesheets. If you want to use these, you don't need all the layers for your animations, only the "body" layer with some others for animations. If you uncheck this options less layers will be produced
+7. Press "Create Player Node" and the MSCA creates a CharacterBody2D Node with all layers, the animations and the anim tree. (You can use the msca in any scene, you don't need to use the test-scene) It created the PlayerNode under the root node of the active scene!
+8. Look at the created Player Node. Under "SpriteLayers" select the AnimationsTree and activate it before you start this scene to test it.
+9. start the Test Scene and use the arrow keys to move the character, you can toggle between run and walk
+10. look into the AnimPlayer inside the SpritLayers of the Player Node to get all the animations included
+
+Hints:
+	- Tool sprites need to be set via code
+	- Visibility of layers needs to be set via code (like the shadow or the tools or such stuff), including this in the animations would hinder you later
+
+There is a shader included in the plugin you can use to color the clothes of the sprite with the ramps provided.
+The shader takes the original colors from 0 to 7 (8 max options inside the ramps
+To use it you must get the colors of the original ramp (inside the FarmerBase: _supporting files/palettes/base ramps)
+and the corresponding colors of the new ramp (inside the FarmerBase: _supporting files/palettes)
+i use this code:
+	#original_ramp was created via code that reads the values from the base_ramp-file
+	#new_ramp was created from the ramp-file
+	var shader = load("res://addons/msca/shader/simple_ramp_shader.gdshader")
+	var shader_material = null
+	var layer_node = get_node_or_null(layer)
+	if layer_node == null: return
+	shader_material = ShaderMaterial.new()
+	shader_material.shader = shader
+	var p_count = 0
+	for p in new_ramp:
+		shader_material.set_shader_parameter("original_"+str(p_count),original_ramp[p_count])
+		shader_material.set_shader_parameter("replace_"+str(p_count),p)
+		p_count = p_count +1
+	layer_node.material = shader_material

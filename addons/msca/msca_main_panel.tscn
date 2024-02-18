@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://bueurs2h3bdh2"]
+
+[ext_resource type="Script" path="res://addons/msca/CreatePlayer.gd" id="1_xri40"]
+
+[node name="CenterContainer" type="CenterContainer"]
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 43.0
+offset_bottom = 39.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("1_xri40")
+
+[node name="Label_PackSelection" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Characterbase you want to use"
+
+[node name="PackSelection" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "Farmer Base"
+popup/item_0/id = 0
+popup/item_1/text = "Hero Base"
+popup/item_1/id = 1
+popup/item_1/disabled = true
+
+[node name="Label_BasePath" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Base Path for Sprites"
+
+[node name="BasePath" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "res://Sprites/Player/MS FarmerBase"
+placeholder_text = "res://Sprites/Player/MS FarmerBase"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="UseLayeredSpritesCheckButton" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Use Layered Sprites 
+(uncheck when using the sprites produced by the Customizer)"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CreatePlayerButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Create Player Node"
+
+[connection signal="pressed" from="VBoxContainer/CreatePlayerButton" to="VBoxContainer" method="_on_CreatePlayer_button_pressed"]

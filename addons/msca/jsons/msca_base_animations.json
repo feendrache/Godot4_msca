@@ -1,0 +1,552 @@
+{
+    "name": "msca_animations",
+    "version": "0.1.0",
+    "animations": [
+        {   "name": "Idle","page": "p1","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 0 ],"flip": false,"tla": [0]},
+                "Up": {"frames": [ 8 ],"flip": false},
+                "Right": {"frames": [ 16 ],"flip": false,"tla": [0]},
+                "Left": {"frames": [ 24 ],"flip": false,"tla": [0]}
+            },
+            "transitions": ["Walk","Run","Push","Pull","ToeTapping","SittingGround","SittingGround2","SittingStool","SittingStoolAsleep","SittingStoolDrinking","Sideglance","Shock","Sleep","Water","Throw","Lift","Jump","Hack","FishCast","Smithing","Climbing","CombatSwordDraw"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Idle2","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 32 ],"flip": false,"tla": [0]},
+                "Up": {"frames": [ 40 ],"flip": false},
+                "Right": {"frames": [ 48 ],"flip": false,"tla": [0]},
+                "Left": {"frames": [ 56 ],"flip": false,"tla": [0]}
+            },
+            "transitions": ["Walk","Run","Push","Pull","ToeTapping","SittingGround","SittingGround2","SittingStool","SittingStoolAsleep","SittingStoolDrinking","Sideglance","Shock","Sleep","Water","Throw","Lift","Jump","Hack","FishCast","Smithing","Climbing","CombatSwordDraw"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Walk","page": "p1","length": 0.6,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.1, 0.2, 0.3, 0.4, 0.5 ],
+            "directions": {
+                "Down": {"frames": [ 32, 33, 34, 35, 36, 37 ],"flip": false,"tla": [0,0,0,0,0,0]},
+                "Up": {"frames": [ 40, 41, 42, 43, 44, 45 ],"flip": false},
+                "Right": {"frames": [ 48, 49, 50, 51, 52, 53 ],"flip": false,"tla": [0,0,0,0,0,0]},
+                "Left": {"frames": [ 56, 57, 58, 59, 60, 61 ],"flip": false,"tla": [0,0,0,0,0,0]}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Run","page": "p1","length": 0.6,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.1, 0.2, 0.3, 0.4, 0.5 ],
+            "directions": {
+                "Down": {"frames": [ 32, 33, 38, 35, 36, 39 ],"flip": false,"tla": [0,0,0,0,0,0]},
+                "Up": {"frames": [ 40, 41, 46, 43, 44, 47 ],"flip": false,"tla": [0,0,0,0,0,0]},
+                "Right": {"frames": [ 48, 49, 54, 51, 52, 55 ],"flip": false,"tla": [0,0,0,0,0,0]},
+                "Left": {"frames": [ 56, 57, 62, 59, 60, 63 ],"flip": false,"tla": [0,0,0,0,0,0]}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Push","page": "p1","length": 1,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.3, 0.9 ],
+            "directions": {
+                "Down": {"frames": [ 1, 2, 1 ],"flip": false,"tla": [0,0,0]},
+                "Up": {"frames": [ 9, 10, 9 ],"flip": false},
+                "Right": {"frames": [ 17, 18, 17 ],"flip": false},
+                "Left": {"frames": [ 25, 26, 25 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Pull","page": "p1","length": 1,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.3, 0.9 ],
+            "directions": {
+                "Down": {"frames": [ 3, 4, 3 ],"flip": false,"tla": [0,0,0]},
+                "Up": {"frames": [ 11, 12, 11 ],"flip": false},
+                "Right": {"frames": [ 19, 20, 19 ],"flip": false},
+                "Left": {"frames": [ 27, 28, 27 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "ToeTapping","page": "p3","length": 0.5,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.2, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 33, 34, 33 ],"flip": false,"tla": [0, 0, 0]},
+                "Up": {"frames": [ 41, 42, 41 ],"flip": false},
+                "Right": {"frames": [ 49, 50, 49 ],"flip": false},
+                "Left": {"frames": [ 57, 58, 57 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "SittingGround","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 37 ],"flip": false},
+                "Up": {"frames": [ 45 ],"flip": false,"tla": [0]},
+                "Right": {"frames": [ 53 ],"flip": false},
+                "Left": {"frames": [ 61 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "SittingGround2","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 38 ],"flip": false},
+                "Up": {"frames": [ 46 ],"flip": false,"tla": [0]},
+                "Right": {"frames": [ 54 ],"flip": false},
+                "Left": {"frames": [ 62 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "SittingStool","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 35 ],"flip": false},
+                "Up": {"frames": [ 43 ],"flip": false,"tla": [0]},
+                "Right": {"frames": [ 51 ],"flip": false},
+                "Left": {"frames": [ 59 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "SittingStoolAsleep","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 36 ],"flip": false},
+                "Up": {"frames": [ 44 ],"flip": false,"tla": [0]},
+                "Right": {"frames": [ 52 ],"flip": false},
+                "Left": {"frames": [ 60 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "SittingStoolDrinking","page": "p4","length": 1.3,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.3, 1 ],
+            "directions": {
+                "Down": {"frames": [ 27, 28, 29 ],"flip": true},
+                "Up": {"frames": [ 27, 28, 29 ],"flip": false},
+                "Right": {"frames": [ 27, 28, 29 ],"flip": true},
+                "Left": {"frames": [ 27, 28, 29 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Sideglance","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 25 ],"flip": false},
+                "Up": {"frames": [ 26 ],"flip": false},
+                "Right": {"frames": [ 25 ],"flip": false},
+                "Left": {"frames": [ 26 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Shock","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 24 ],"flip": false},
+                "Up": {"frames": [ 24 ],"flip": false},
+                "Right": {"frames": [ 24 ],"flip": false},
+                "Left": {"frames": [ 24 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Sleep","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 39 ],"flip": false},
+                "Up": {"frames": [ 47 ],"flip": false},
+                "Right": {"frames": [ 55 ],"flip": false},
+                "Left": {"frames": [ 63 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Water","page": "p2","length": 1.5,"step": 0.1,"loop": false,"switchMode":"AtEnd",
+            "timer": [ 0, 0.3, 0.45, 1, 1.3 ],
+            "directions": {
+                "Down": {"frames": [ 32, 33, 34, 35 ],"flip": false},
+                "Up": {"frames": [ 40, 41, 42, 43 ],"flip": false,"tla": [0,0,0,0]},
+                "Right": {"frames": [ 48, 49, 50, 51 ],"flip": false},
+                "Left": {"frames": [ 56, 57, 58, 59 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "Throw","page": "p2","length": 1.2,"step": 0.1,"loop": false,"switchMode":"AtEnd",
+            "timer": [ 0, 0.3, 0.4, 0.5, 1 ],
+            "directions": {
+                "Down": {"frames": [ 4, 5, 6, 7 ],"flip": false},
+                "Up": {"frames": [ 12, 13, 14, 15 ],"flip": false,"tla": [0,0,0,0]},
+                "Right": {"frames": [ 20, 21, 22, 23 ],"flip": false},
+                "Left": {"frames": [ 28, 29, 30, 31 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "Lift","page": "p2","length": 1.7,"step": 0.1,"loop": false,"switchMode":"AtEnd",
+            "timer": [ 0, 0.3, 0.5, 1, 1.3 ],
+            "directions": {
+                "Down": {"frames": [ 36, 37, 38, 39 ],"flip": false,"tla": [0,0,0,0]},
+                "Up": {"frames": [ 44, 45, 46, 47 ],"flip": false},
+                "Right": {"frames": [ 52, 53, 54, 55 ],"flip": false},
+                "Left": {"frames": [ 60, 61, 62, 63 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Jump","page": "p1","length": 0.7,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3, 0.5 ],
+            "directions": {
+                "Down": {"frames": [ 5, 6, 7, 5 ],"flip": false,"tla": [0,0,0,0]},
+                "Up": {"frames": [ 13, 14, 15, 13 ],"flip": false,"tla": [0,0,0,0]},
+                "Right": {"frames": [ 21, 22, 23, 21 ],"flip": false,"tla": [0,0,0,0]},
+                "Left": {"frames": [ 29, 30, 31, 29 ],"flip": false,"tla": [0, 0, 7, 0]}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "Hack","page": "p2","length": 0.6,"step": 0.1,"loop": false,"switchMode":"AtEnd",
+            "timer": [ 0, 0.2, 0.3, 0.5 ],
+            "directions": {
+                "Down": {"frames": [ 0, 1, 2, 3 ],"flip": false},
+                "Up": {"frames": [ 8, 9, 10, 11 ],"flip": false,"tla": [7,7,0,0]},
+                "Right": {"frames": [ 16, 17, 18, 19 ],"flip": false},
+                "Left": {"frames": [ 24, 25, 26, 27 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "FishCast","page": "p3","length": 1.3,"step": 0.1,"loop": false,"switchMode":"AtEnd",
+            "timer": [ 0, 0.2, 0.3, 0.5, 1.2 ],
+            "directions": {
+                "Down": {"frames": [0, 1, 2, 3 ],"flip": false},
+                "Up": {"frames": [ 8, 9, 10, 11 ],"flip": false},
+                "Right": {"frames": [ 16, 23, 17, 18 ],"flip": false},
+                "Left": {"frames": [ 32, 33, 25, 26 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2","FishWait"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "FishWait","page": "p3","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 3 ],"flip": false},
+                "Up": {"frames": [ 11 ],"flip": false},
+                "Right": {"frames": [ 18 ],"flip": false},
+                "Left": {"frames": [ 26 ],"flip": false}
+            },
+            "transitions": ["FishReel"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "FishReel","page": "p3","length": 1,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.3 ],
+            "directions": {
+                "Down": {"frames": [ 4, 5 ],"flip": false},
+                "Up": {"frames": [ 12, 13 ],"flip": false},
+                "Right": {"frames": [ 21, 22 ],"flip": false},
+                "Left": {"frames": [ 29, 30 ],"flip": false}
+            },
+            "transitions": ["FishShow"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "FishShow","page": "p3","length": 1,"step": 0.1,"loop": false,"switchMode":"AtEnd",
+            "timer": [ 0, 0.3 ],
+            "directions": {
+                "Down": {"frames": [ 6, 7 ],"flip": false},
+                "Up": {"frames": [ 14, 15 ],"flip": false},
+                "Right": {"frames": [ 24, 31 ],"flip": false},
+                "Left": {"frames": [ 34, 35 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "Smithing","page": "p4","length": 1.2,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.2, 0.3, 0.4, 0.6 ],
+            "directions": {
+                "Down": {"frames": [ 0, 1, 2, 3, 4 ],"flip": false},
+                "Up": {"frames": [ 8, 9, 10, 11, 12 ],"flip": false},
+                "Right": {"frames": [ 0, 1, 2, 3, 4 ],"flip": false},
+                "Left": {"frames": [ 8, 9, 10, 11, 12 ],"flip": false}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": false
+        },
+        {   "name": "Climbing","page": "p4","length": 1.2,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.1, 0.2, 0.3, 0.5, 0.6, 1.1 ],
+            "directions": {
+                "Down": {"frames": [ 16, 17, 18, 19, 18, 17, 16  ],"flip": false,"tla": [0,0,0,0,0,0,0]},
+                "Up": {"frames": [ 16, 17, 18, 19, 18, 17, 16  ],"flip": false,"tla": [0,0,0,0,0,0,0]},
+                "Right": {"frames": [ 16, 17, 18, 19, 18, 17, 16  ],"flip": false,"tla": [0,0,0,0,0,0,0]},
+                "Left": {"frames": [ 16, 17, 18, 19, 18, 17, 16  ],"flip": false,"tla": [0,0,0,0,0,0,0]}
+            },
+            "transitions": ["ClimbingStandup"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "ClimbingStandup","page": "p4","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 20 ],"flip": false,"tla": [0]},
+                "Up": {"frames": [ 20 ],"flip": false,"tla": [0]},
+                "Right": {"frames": [ 20 ],"flip": false,"tla": [0]},
+                "Left": {"frames": [ 20 ],"flip": false,"tla": [0]}
+            },
+            "transitions": ["Idle", "Idle2"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": false,
+            "tlb_visible": false
+        },
+        {   "name": "CombatSwordIdle","page": "pONE2","length": 0.5,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 0, 1, 2, 3 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 8, 8, 8, 8 ]},
+                "Up": {"frames": [ 8, 9, 10, 11 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 0, 0, 0, 0 ]},
+                "Right": {"frames": [ 16, 17, 18, 19 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 1, 1, 1, 1 ]},
+                "Left": {"frames": [ 24, 25, 26, 27 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 1, 1, 1, 1 ]}
+            },
+            "transitions": ["CombatSwordMove","CombatSwordSheath","CombatSwordParry","CombatSwordDodge","CombatSwordHurt","CombatSwordDead","CombatSwordDeadDown","CombatSwordRetreat","CombatSwordLunge","CombatSwordSlash1","CombatSwordSlash2","CombatSwordShieldThrust","CombatSwordShieldbash"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordMove","page": "pONE2","length": 0.5,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 4, 5, 6, 7 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 8, 8, 8, 8 ]},
+                "Up": {"frames": [ 12, 13, 14, 15 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 0, 0, 0, 0 ]},
+                "Right": {"frames": [ 20, 21, 22, 23 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 1, 1, 1, 1 ]},
+                "Left": {"frames": [ 28, 29, 30, 31 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 1, 1, 1, 1 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordDraw","page": "pONE1","length": 0.4,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.1, 0.2, 0.3 ],
+            "directions": {
+                "Down": {"frames": [ 0, 1, 2 ],"flip": false,"tla": [ 0, 7, 0 ],"tlb": [ 0, 0, 0 ]},
+                "Up": {"frames": [ 8, 9, 10 ],"flip": false,"tla": [ 7, 0, 0 ],"tlb": [ 8, 0, 7 ]},
+                "Right": {"frames": [ 16, 17, 18 ],"flip": false,"tla": [ 0, 7, 7 ],"tlb": [ 0, 0, 0 ]},
+                "Left": {"frames": [ 24, 25, 26 ],"flip": false,"tla": [ 0, 7, 7 ],"tlb": [ 0, 0, 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordSheath","page": "pONE1","length": 0.4,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.1, 0.2, 0.3 ],
+            "directions": {
+                "Down": {"frames": [ 2, 1, 0 ],"flip": false,"tla": [ 0, 7, 0 ],"tlb": [ 0, 8, 0 ]},
+                "Up": {"frames": [ 10, 9, 8 ],"flip": false,"tla": [ 0, 0, 7 ],"tlb": [ 7, 0, 8 ]},
+                "Right": {"frames": [ 18, 17, 16 ],"flip": false,"tla": [ 7, 7, 0 ],"tlb": [ 1, 1, 0 ]},
+                "Left": {"frames": [ 26, 25, 24 ],"flip": false,"tla": [ 7, 7, 0 ],"tlb": [ 1, 1, 0 ]}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordParry","page": "pONE1","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 3 ],"flip": false,"tla": [ 7 ],"tlb": [ 0 ]},
+                "Up": {"frames": [ 11 ],"flip": false,"tla": [ 0 ],"tlb": [ 8 ]},
+                "Right": {"frames": [ 19 ],"flip": false,"tla": [ 0 ],"tlb": [ 8 ]},
+                "Left": {"frames": [ 27 ],"flip": false,"tla": [ 0 ],"tlb": [ 8 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordDodge","page": "pONE1","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0  ],
+            "directions": {
+                "Down": {"frames": [ 4 ],"flip": false,"tla": [ 7 ],"tlb": [ 8 ]},
+                "Up": {"frames": [ 12 ],"flip": false,"tla": [ 0 ],"tlb": [ 0 ]},
+                "Right": {"frames": [ 20 ],"flip": false,"tla": [ 8 ],"tlb": [ 1 ]},
+                "Left": {"frames": [ 28 ],"flip": false,"tla": [ 8 ],"tlb": [ 1 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordHurt","page": "pONE1","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 5 ],"flip": false,"tla": [ 7 ],"tlb": [ 0 ]},
+                "Up": {"frames": [ 13 ],"flip": false,"tla": [ 0 ],"tlb": [ 8 ]},
+                "Right": {"frames": [ 21 ],"flip": false,"tla": [ 7 ],"tlb": [ 0 ]},
+                "Left": {"frames": [ 29 ],"flip": false,"tla": [ 7 ],"tlb": [ 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordDead","page": "pONE1","length": 0.2,"step": 0.1,"loop": true,
+            "timer": [ 0, 0.1 ],
+            "directions": {
+                "Down": {"frames": [ 6, 7 ],"flip": false,"tla": [ 1, 1 ],"tlb": [ 0, 0 ]},
+                "Up": {"frames": [ 14, 15 ],"flip": false,"tla": [ 0, 0 ],"tlb": [ 1, 1 ]},
+                "Right": {"frames": [ 22, 23 ],"flip": false,"tla": [ 1, 1 ],"tlb": [ 0, 0 ]},
+                "Left": {"frames": [ 30, 31 ],"flip": false,"tla": [ 1, 1 ],"tlb": [ 0, 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordDeadDown","page": "pONE1","length": 0.1,"step": 0.1,"loop": true,
+            "timer": [ 0 ],
+            "directions": {
+                "Down": {"frames": [ 7 ],"flip": false,"tla": [ 1 ],"tlb": [ 0 ]},
+                "Up": {"frames": [ 15 ],"flip": false,"tla": [ 0 ],"tlb": [ 1 ]},
+                "Right": {"frames": [ 23 ],"flip": false,"tla": [ 1 ],"tlb": [ 0 ]},
+                "Left": {"frames": [ 31 ],"flip": false,"tla": [ 1 ],"tlb": [ 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "Immediate",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordRetreat","page": "pONE2","length": 0.4,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 32, 33, 32 ],"flip": false,"tla": [ 7, 7, 7 ],"tlb": [ 8, 8, 8 ]},
+                "Up": {"frames": [ 40, 41, 40 ],"flip": false,"tla": [ 0, 0, 0 ],"tlb": [ 0, 0, 0 ]},
+                "Right": {"frames": [ 48, 49, 48 ],"flip": false,"tla": [ 7, 7, 7 ],"tlb": [ 1, 1, 1 ]},
+                "Left": {"frames": [ 56, 57, 56 ],"flip": false,"tla": [ 7, 7, 7 ],"tlb": [ 1, 1, 1 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordLunge","page": "pONE2","length": 0.4,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3 ],
+            "directions": {
+                "Down": {"frames": [ 32, 34, 32 ],"flip": false,"tla": [ 7, 7, 7 ],"tlb": [ 8, 8, 8 ]},
+                "Up": {"frames": [ 40, 42, 40 ],"flip": false,"tla": [ 0, 0, 0 ],"tlb": [ 0, 0, 0 ]},
+                "Right": {"frames": [ 48, 50, 48 ],"flip": false,"tla": [ 7, 7, 7 ],"tlb": [ 1, 1, 1 ]},
+                "Left": {"frames": [ 56, 58, 56 ],"flip": false,"tla": [ 7, 7, 7 ],"tlb": [ 1, 1, 1 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordSlash1","page": "pONE3","length": 0.5,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 0, 1, 2, 3 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 7, 0, 0, 0 ]},
+                "Up": {"frames": [ 8, 9, 10, 11 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 0, 0, 7, 7 ]},
+                "Right": {"frames": [ 16, 17, 18, 19 ],"flip": false,"tla": [ 0, 7, 0, 0 ],"tlb": [ 0, 1, 0, 0 ]},
+                "Left": {"frames": [ 24, 25, 26, 27 ],"flip": false,"tla": [ 1, 7, 0, 0 ],"tlb": [ 0, 1, 1, 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordSlash2","page": "pONE3","length": 0.5,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 4, 5, 6, 7 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 0, 1, 8, 8 ]},
+                "Up": {"frames": [ 12, 13, 14, 15 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 8, 8, 0, 0 ]},
+                "Right": {"frames": [ 20, 21, 22, 23 ],"flip": false,"tla": [ 1, 0, 0, 1 ],"tlb": [ 0, 1, 1, 0 ]},
+                "Left": {"frames": [ 28, 29, 30, 31 ],"flip": false,"tla": [ 1, 1, 1, 1 ],"tlb": [ 0, 0, 0, 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordShieldThrust","page": "pONE3","length": 0.5,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 32, 33, 34, 35 ],"flip": false,"tla": [ 7, 7, 0, 0 ],"tlb": [ 8, 0, 0, 0 ]},
+                "Up": {"frames": [ 40, 41, 42, 43 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 0, 0, 0, 0 ]},
+                "Right": {"frames": [ 48, 49, 50, 51 ],"flip": false,"tla": [ 7, 7, 0, 0 ],"tlb": [ 0, 0, 0, 0 ]},
+                "Left": {"frames": [ 56, 57, 58, 59 ],"flip": false,"tla": [ 7, 7, 0, 0 ],"tlb": [ 0, 0, 0, 0 ]}
+            },
+            "transitions": ["Idle","Idle2"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        },
+        {   "name": "CombatSwordShieldbash","page": "pONE3","length": 0.5,"step": 0.1,"loop": false,
+            "timer": [ 0, 0.2, 0.3, 0.4 ],
+            "directions": {
+                "Down": {"frames": [ 36, 37, 38, 39 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 8, 8, 0, 0 ]},
+                "Up": {"frames": [ 44, 45, 46, 47 ],"flip": false,"tla": [ 0, 0, 0, 0 ],"tlb": [ 0, 0, 1, 8 ]},
+                "Right": {"frames": [ 52, 53, 54, 55 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 6, 0, 0, 0 ]},
+                "Left": {"frames": [ 60, 61, 62, 63 ],"flip": false,"tla": [ 7, 7, 7, 7 ],"tlb": [ 6, 0, 0, 0 ]}
+            },
+            "transitions": ["CombatSwordIdle"],
+            "transition_switch_mode": "AtEnd",
+            "tla_visible": true,
+            "tlb_visible": true
+        }
+    ]
+}
