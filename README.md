@@ -1,11 +1,12 @@
 # MSCA (Mana Seed Character Animator) for Godot 4
 Welcome to the MSCA for Godot 4. 
 
-__Please be aware that this plugin is created to work with the newest Version of Godot 4__
+__Please be aware that this plugin is created to work with the Godot 4.2.1__
 
 I don't plan to backport any of it to Godot 3, just to let you know.
 
-### Version 0.9.4
+### Version 0.9.5
+- added some stuff to show how i did it in the test scene, commented the code of the test scene to make it better understandable
 __still not finished, i'm still working on the animations to get them as i want.__
 
 ### Description
