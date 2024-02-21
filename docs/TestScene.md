@@ -5,7 +5,7 @@
 - go to the MSCA. set the base sprite path and press "Create Player Node"
 - Start the Scene (Run current Scene, F6)
 
-![grafik](https://github.com/feendrache/Godot4_msca/assets/33016907/a1966f92-2b90-4002-9e8b-206b20bdd6cb)
+![grafik](https://github.com/feendrache/Godot4_msca/assets/33016907/46b92118-f3cc-4e8b-93b7-2c337c03af38)
 
 
 - use the arrow keys to walk around
