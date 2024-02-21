@@ -10,4 +10,6 @@
 - use the arrow keys to walk around
 - you can toggle between run and walk
 
-This is a very basic Test-Scene, may be expanded later 
+Update to 0.9.5:
+- i added some examples for equipping clothes and swapping colors with the shader. Please look into the code of the test-scene.
+- i added two more animation triggers that use the animation ended signal and set visibility to the needed layer of the tool just as example
