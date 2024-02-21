@@ -45,8 +45,6 @@ func create_palette_from_image(image) ->Array:
 	# Get the size of the image
 	var image_width = image.get_width()
 	var image_height = image.get_height()
-
-	
 	# Iterate over the pixel data
 	for y in range(image_height):
 		for x in range(image_width):

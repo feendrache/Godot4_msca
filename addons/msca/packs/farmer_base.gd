@@ -347,7 +347,8 @@ func addFramesTrack(new_anim, track, track_data, direction_data, animation, laye
 	
 	for frame in frames:
 		if frame == -1:
-			new_anim.track_insert_key(track_id, timer_value, 0)
+			var max_frame = layer_data.hframes * layer_data.vframes -1
+			new_anim.track_insert_key(track_id, timer_value, max_frame)
 		else: 
 			new_anim.track_insert_key(track_id, timer_value, frame)
 		timer_value = timer_value + animation.timer[counter]

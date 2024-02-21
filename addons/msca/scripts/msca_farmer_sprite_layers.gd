@@ -12,8 +12,9 @@ func set_corresponding_layers_to_animframe(animframe:int, flipped:bool):
 	#the Animation Tree must be disabled when you use this
 	var corresponding_layers = [$"00undr",$"01body",$"02sock",$"03fot1",$"04lwr1",$"05shrt",$"06lwr2",$"07fot2",$"08lwr3",$"09hand",$"10outr",$"11neck",$"12face",$"13hair",$"14head",$"15over"]
 	for l in corresponding_layers:
-		l.frame = animframe
-		l.flip_h = flipped
+		if l != null:
+			l.frame = animframe
+			l.flip_h = flipped
 
 func change_child_position(sprite_layer, pos):
 	var spr_layer = self.get_node(sprite_layer)
