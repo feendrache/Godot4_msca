@@ -14,6 +14,10 @@ The Setup of all animations happen in the json file, so when you want to adjust 
 
 You can edit the animations themselves right inside the AnimationPlayer node in the editor after you created the Player. But if you want your changes to be present every time you recreate the node, you'll need to edit the JSON directly.
 
+if you want to help me a bit, you can support me at KoFi: 
+
+<a href='https://ko-fi.com/F1F1BJIJL' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi4.png?v=3' border='0' alt='Support me at ko-fi.com' /></a>
+
 ## Description
 Currently the following ManaSeed Sprite systems are supported:
 - [Farmer Sprite System](https://seliel-the-shaper.itch.io/farmer-base)
