@@ -5,11 +5,11 @@ __Please be aware that this plugin is created to work with the Godot 4.2.1__
 
 I don't plan to backport any of it to Godot 3, just to let you know.
 
-### Version 0.9.5
-- added some stuff to show how i did it in the test scene, commented the code of the test scene to make it better understandable
-__still not finished, i'm still working on the animations to get them as i want.__
+## Disclaimer
+I made this plugin mainly for my game. With manipulating the JSON file i have an easy way to recreate the whole Node again and again without having to recreate all the anims per hand. 
+With this in mind please be aware that it won't fit everyone and was never intended to do so. It mainly presents a way of how to do it.
 
-### Description
+## Description
 Currently the following ManaSeed Sprite systems are supported:
 - Farmer Sprite System
 
@@ -30,3 +30,10 @@ I will try to explain the MSCA to you in the following pages:
   - [MSCAPaletteSwaps](docs/MSCAPaletteSwaps.md)
 - [The Plaette Swap Shader](docs/paletteShader.md)
 - [Test-Scene](docs/TestScene.md)
+
+## DevLog
+### 0.9.6
+- small changes for better understanding
+### 0.9.5
+- added some stuff to show how i did it in the test scene, commented the code of the test scene to make it better understandable
+**
