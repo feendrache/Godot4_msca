@@ -19,23 +19,34 @@ text = "Characterbase you want to use"
 
 [node name="PackSelection" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
-item_count = 2
+item_count = 1
 selected = 0
 popup/item_0/text = "Farmer Base"
 popup/item_0/id = 0
-popup/item_1/text = "Hero Base"
-popup/item_1/id = 1
-popup/item_1/disabled = true
 
 [node name="Label_BasePath" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Base Path for Sprites"
+
+[node name="FileDialogButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Search Base Path with File Dialogue"
+
+[node name="FileDialog" type="FileDialog" parent="VBoxContainer"]
+title = "Open a Directory"
+initial_position = 2
+size = Vector2i(500, 800)
+popup_window = true
+ok_button_text = "Select Current Folder"
+file_mode = 2
+use_native_dialog = true
 
 [node name="BasePath" type="LineEdit" parent="VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 text = "res://Sprites/Player/MS FarmerBase"
 placeholder_text = "res://Sprites/Player/MS FarmerBase"
+clear_button_enabled = true
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
@@ -53,4 +64,6 @@ layout_mode = 2
 layout_mode = 2
 text = "Create Player Node"
 
+[connection signal="pressed" from="VBoxContainer/FileDialogButton" to="VBoxContainer" method="_on_file_dialog_button_pressed"]
+[connection signal="dir_selected" from="VBoxContainer/FileDialog" to="VBoxContainer" method="_on_file_dialog_dir_selected"]
 [connection signal="pressed" from="VBoxContainer/CreatePlayerButton" to="VBoxContainer" method="_on_CreatePlayer_button_pressed"]

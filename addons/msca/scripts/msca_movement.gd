@@ -5,12 +5,12 @@ const FRICTION = 10
 
 var velocity = Vector2.ZERO
 
-@export var non_idle_anim:String = "Walk"
-
+@export var movement_anim:String = "Walk"
+@export var enabled:bool = true
 @onready var player = get_parent()
 
 func _physics_process(delta):
-	move_player(delta)
+	if enabled: move_player(delta)
 
 func move_player(delta):
 	var input_vector = Vector2.ZERO
@@ -19,7 +19,7 @@ func move_player(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
-		player.travel_to_anim(non_idle_anim, input_vector)
+		player.travel_to_anim(movement_anim, input_vector)
 		velocity = velocity.move_toward(input_vector * player.speed, (ACCELERATION * player.speed) * delta)
 	else:
 		player.travel_to_anim("Idle")

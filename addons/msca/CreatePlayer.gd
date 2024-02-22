@@ -20,3 +20,9 @@ func _on_CreatePlayer_button_pressed():
 			farmer_base.create_from_farmer_base(root, playerNode, base_path, create_sprite_layers)
 		1:
 			character_base.create_from_character_base(root, playerNode, base_path)
+
+func _on_file_dialog_button_pressed():
+	$FileDialog.visible = true
+
+func _on_file_dialog_dir_selected(dir):
+	$BasePath.text = dir

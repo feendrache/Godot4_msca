@@ -134,7 +134,7 @@ func createAnimations():
 
 func addLastTracks(new_anim, animation, animation_name, anim_length):
 	var first_frame = 0
-	var last_frame = get_frame_time(animation, animation.timer.size() -1)
+	var last_frame = get_frame_time(animation, animation.timer.size())# -1)
 	var signal_emitter_track_id = new_anim.add_track(Animation.TYPE_METHOD)
 	new_anim.track_set_path(signal_emitter_track_id, ".")
 	var start_method_params = {

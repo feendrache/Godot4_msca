@@ -111,23 +111,27 @@ func _on_animation_state_finished(anim_name, _duration):
 		"FishingCastLine": 
 			$Player/SpriteLayers/fishing_up_down.visible = false
 			$Player/SpriteLayers/fishing_right_left.visible = false
+			# don't forget to reenable movement
+			$Player/Movement.enabled = true
 		"PlantSeeds":
 			$"Player/SpriteLayers/32x32_anims".visible = false
+			# don't forget to reenable movement
+			$Player/Movement.enabled = true
 
 # change the movement type to walk
 func _on_walk_button_pressed():
-	set_non_idle_anim("Walk", 60)
+	set_movement_anim("Walk", 60)
 
 # change the movement type to run
 func _on_run_button_pressed():
-	set_non_idle_anim("Run", 100)
+	set_movement_anim("Run", 100)
 
 # this changes the movement type (run or walk)
-func set_non_idle_anim(animName, speed = 60):
+func set_movement_anim(animName, speed = 60):
 	var player = get_node_or_null("Player")
 	if player == null: return
 	player.speed = speed
-	$Player/Movement.non_idle_anim = animName
+	$Player/Movement.movement_anim = animName
 	$Walk_Run_Controls/AnimLabel.text = animName
 
 # get the texture for the shirt, that the button will give you
@@ -191,6 +195,8 @@ func _on_trousers_color_2_button_pressed():
 
 # when you start the fishing cast line animation you need to trigger the anim and set visibility the the right layer
 func _on_fishing_anim_button_pressed():
+	# movement needs to be disabled during playing the anim
+	$Player/Movement.enabled = false
 	var player = get_node_or_null("Player")
 	player.travel_to_anim("FishingCastLine")
 	# the player-script stores it's facing direction
@@ -200,6 +206,8 @@ func _on_fishing_anim_button_pressed():
 
 # when you trigger the plant seeds anim, you need to set the 32x32anims layer visible so you can see the seeds falling
 func _on_plant_seeds_button_pressed():
+	# movement needs to be disabled during playing the anim
+	$Player/Movement.enabled = false
 	var player = get_node_or_null("Player")
 	player.travel_to_anim("PlantSeeds")
 	$"Player/SpriteLayers/32x32_anims".visible = true
