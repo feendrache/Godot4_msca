@@ -7,7 +7,10 @@ I don't plan to backport any of it to Godot 3, just to let you know.
 
 ## Disclaimer
 I made this plugin mainly for my game. With manipulating the JSON file i have an easy way to recreate the whole Node again and again without having to recreate all the anims per hand. 
+
 With this in mind please be aware that it won't fit everyone and was never intended to do so. It mainly presents a way of how to do it.
+
+The Setup of all animations happen in the json file, so when you want to adjust the Settings of the animations like timers or stuff, please visit there and feel free to adjust them, but be aware that an update will overwrite this json again.
 
 ## Description
 Currently the following ManaSeed Sprite systems are supported:
