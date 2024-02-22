@@ -11,7 +11,7 @@ With this in mind please be aware that it won't fit everyone and was never inten
 
 ## Description
 Currently the following ManaSeed Sprite systems are supported:
-[Farmer Sprite System](https://seliel-the-shaper.itch.io/farmer-base)
+- [Farmer Sprite System](https://seliel-the-shaper.itch.io/farmer-base)
   
 <a href="https://seliel-the-shaper.itch.io/farmer-base" target="_blank"><img src="https://github.com/feendrache/Godot4_msca/assets/33016907/4a15f9d3-8190-4d47-8e70-786824704491" width="400"/></a>
 
