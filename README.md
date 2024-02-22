@@ -12,6 +12,8 @@ With this in mind please be aware that it won't fit everyone and was never inten
 
 The Setup of all animations happen in the json file, so when you want to adjust the Settings of the animations like timers or stuff, please visit there and feel free to adjust them, but be aware that an update will overwrite this json again.
 
+You can edit the animations themselves right inside the AnimationPlayer node in the editor after you created the Player. But if you want your changes to be present every time you recreate the node, you'll need to edit the JSON directly.
+
 ## Description
 Currently the following ManaSeed Sprite systems are supported:
 - [Farmer Sprite System](https://seliel-the-shaper.itch.io/farmer-base)
