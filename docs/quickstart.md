@@ -12,11 +12,14 @@ After copying the files you need to open your project settings inside godot and 
 - Clicking on the MSCA should show you the main screen of the plugin
 <img width="317" alt="MSCA Main" src="https://github.com/feendrache/Godot4_msca/assets/33016907/1d65db2a-4529-4963-809b-ebb4b319abe9">
 
-- Enter the path where you put your sprite system sprites inside your project. The path you want to set is the folder that contains all parts of the Sprite System:
+- Enter the path where you put your sprite system sprites inside your project. The path you want to set is the folder that contains all parts of the Sprite System (you can select it via a dialogue too):
 
-![grafik](https://github.com/feendrache/Godot4_msca/assets/33016907/ef130b17-08f3-4f8f-9583-64d9a5a46e4c)
+![grafik](https://github.com/feendrache/Godot4_msca/assets/33016907/da528d26-ebf0-41bb-978e-1844fb00122f)
+
 
 - You can either create a full layer system, where all the layers for the clothes and accessoires are created (checkbox "Use Layered Sprites" active) or a smaller layer system, where all layers of the player itself will be one (like you can create with the FarmerSprite Customizer provided in the Farmer Sprite System).
 - Pressing the "Create Player Node" Button will create the Player Node inside the currently opened scene.
 
 ![grafik](https://github.com/feendrache/Godot4_msca/assets/33016907/5376654a-a5e8-4437-af67-2dd72aafc15e)
+
+- Inside the addon-Folders there is a test-Folder with a Test-Scene i set up where you can test out some minor examples i included
