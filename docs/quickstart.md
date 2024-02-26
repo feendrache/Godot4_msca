@@ -1,7 +1,7 @@
 ## Installation and Quickstart
 
 ### Installation
-You need to download the addons/msca content of this repository and place it in your project. Alle Plugins you want to use in your project need to be in an addons folder in your ressources folder of the project.
+You need to download the addons/msca content of this repository and place it in your project. Alle Plugins you want to use in your project need to be in an addons folder in your base/res folder of the project.
 
 ![grafik](https://github.com/feendrache/Godot4_msca/assets/33016907/fa9a1dc5-0202-49e6-b597-23a11d219466)
 
