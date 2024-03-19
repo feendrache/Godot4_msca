@@ -12,17 +12,11 @@ extends Node2D
 # very simple shader, provided by this plugin
 var shader = preload("res://addons/msca/shader/ramp_shader_material.gdshader")
 
-# the color swapper i created for my game and included into the msca
-var color_swapper
 # store the palettes you want to use
 var palettes
 
 # get the base path of the sprites of the Farmer Sprite System 
 var farmer_base_path
-
-func _init():
-	# initialize the color swapper
-	color_swapper = MSCAPaletteSwaps.new()
 
 func _ready():
 	# check if there is a player node at all (for this test scene to be able to run it's stuff it needs to be named "Player" just as the msca names the node
@@ -63,7 +57,7 @@ func load_palettes():
 		# the colors of the base textures are extracted
 		var base_texture = load(bp["base_file"])
 		# the color swapper in the msca has a function that can get the colors out of an image
-		bp["base"] = color_swapper.create_palette_from_image(base_texture.get_image())
+		bp["base"] = MSCAPaletteSwaps.create_palette_from_image(base_texture.get_image())
 		if bp["file"] != "":
 			# for the other palettes
 			bp["palettes"] = []
@@ -78,7 +72,7 @@ func load_palettes():
 				# a palette image is cut out
 				var palette_image = palettes_image.get_region(Rect2i(0,start_y,palettes_image.get_width(),2))
 				# and the palette is extracted with the swapper
-				var new_palette = color_swapper.create_palette_from_image(palette_image)
+				var new_palette = MSCAPaletteSwaps.create_palette_from_image(palette_image)
 				# if there are colors in the palette (to not add the empty rows) it is added to the array of possible palettes
 				if new_palette.size() > 0: bp["palettes"].append(new_palette)
 				# even if i store these palettes here in this array, when i save the informations for the playe or items,
