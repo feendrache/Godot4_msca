@@ -8,7 +8,7 @@ signal make_sound(state_name, sound_name)
 
 var shader = preload("res://addons/msca/shader/simple_ramp_shader.gdshader")
 
-func set_corresponding_layers_to_animframe(animframe:int, flipped:bool):
+func set_corresponding_layers_to_animframe(animframe:int, flipped:bool = false):
 	#the Animation Tree must be disabled when you use this
 	var corresponding_layers = [$"00undr",$"01body",$"02sock",$"03fot1",$"04lwr1",$"05shrt",$"06lwr2",$"07fot2",$"08lwr3",$"09hand",$"10outr",$"11neck",$"12face",$"13hair",$"14head",$"15over"]
 	for l in corresponding_layers:
@@ -42,9 +42,8 @@ func get_full_spritesheet_name(layer, type, version):
 	return "fbas_"+layer+"_"+type+"_"+version
 
 func set_shader(layer, original_ramp, new_ramp):
-	var swapper = MSCAPaletteSwaps.new()
-	original_ramp = swapper.html_to_color_palette(original_ramp)
-	new_ramp = swapper.html_to_color_palette(new_ramp)
+	original_ramp = MSCAPaletteSwaps.html_to_color_palette(original_ramp)
+	new_ramp = MSCAPaletteSwaps.html_to_color_palette(new_ramp)
 	var shader_material = null
 	var layer_node = get_node_or_null(layer)
 	if layer_node == null: return
