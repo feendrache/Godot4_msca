@@ -1,6 +1,6 @@
 {
 	"name": "farming_base_animations",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"start_animation": "Idle",
 	"nonlayer_bodyparts": {
 		"shadow": {
@@ -11,12 +11,12 @@
 			"visible": true,
 			"init_offset": {
 				"x": 0,
-				"y": 1
+				"y": 11
 			},
 			"init_frame": 33
 		},
 		"mount_bottom": {
-			"create_track": true,
+			"create_track": false,
 			"hframes": 8,
 			"vframes": 8,
 			"visible": false,
@@ -38,7 +38,7 @@
 			"visible": true,
 			"init_offset": {
 				"x": 0,
-				"y": 1
+				"y": 11
 			},
 			"init_frame": 33
 		},
@@ -259,8 +259,8 @@
 			"visible": false
 		},
 		"mount_top": {
-			"create_track": true,
-			"hframes": 8,
+			"create_track": false,
+			"hframes": 16,
 			"vframes": 8,
 			"visible": false,
 		},

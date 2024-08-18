@@ -41,5 +41,6 @@ vec4 swap_color(vec4 color){
 }
 
 void fragment() {
-	COLOR = swap_color(texture(TEXTURE, UV));
+	//COLOR = swap_color(texture(TEXTURE, UV));
+	COLOR = swap_color(COLOR);
 }

@@ -20,7 +20,7 @@ func change_child_position(sprite_layer, pos):
 	var spr_layer = self.get_node(sprite_layer)
 	if (pos != null && spr_layer != null): self.move_child(spr_layer, pos)
 
-func emit_animation_state_finished(state_name:String,wait_time:float):
+func emit_animation_state_finished(state_name:String,wait_time:float = 0.0):
 	emit_signal("animation_state_finished", state_name, wait_time)
 
 func emit_animation_state_started(state_name:String):

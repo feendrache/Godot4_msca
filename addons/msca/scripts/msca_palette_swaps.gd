@@ -2,7 +2,7 @@ class_name MSCAPaletteSwaps
 
 static func create_shader_material(original_palette, use_palette)->ShaderMaterial:
 	var shader_material = ShaderMaterial.new()
-	var shader = load("res://addons/msca/shader/ramp_shader_material.gdshader")
+	var shader = load("res://addons/msca/shader/simple_ramp_shader.gdshader")
 	shader_material.shader = shader
 	var p_count = 0
 	for p in use_palette:

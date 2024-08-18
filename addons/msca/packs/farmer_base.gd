@@ -219,9 +219,11 @@ func addOffsetTrack(new_anim, track, track_data, direction_data, animation, dire
 	var has_offset = null
 	if "offset" in track_data:
 		has_offset = track_data.offset
+	elif "init_offset" in layer_data:
+		has_offset = []
+		has_offset.append(layer_data.init_offset)
 	elif "use_offset" in track_data && "offset" in direction_data.tracks[track_data.use_offset]:
 		has_offset = direction_data.tracks[track_data.use_offset].offset
-	#print(has_offset)
 	if has_offset != null:
 		timer_value = 0
 		counter = 0
@@ -238,18 +240,20 @@ func addOffsetTrack(new_anim, track, track_data, direction_data, animation, dire
 			counter = counter + 1
 	else:
 		var offset = get_track_offset(track_data)
-		if offset > 0:
-			var offset_track_id = new_anim.add_track(Animation.TYPE_VALUE)
-			var offset_v = Vector2(0,0)
-			new_anim.track_set_path(offset_track_id, track+":offset")
-			new_anim.value_track_set_update_mode(offset_track_id, Animation.UPDATE_DISCRETE)
-			match direction:
-				"Down": offset_v.y = offset
-				"Up": offset_v.y = -offset
-				"Right": offset_v.x = offset
-				"Left": offset_v.x = -offset
-			offset_v = offset_v + spriteOffset
-			new_anim.track_insert_key(offset_track_id, 0, offset_v)
+		var offset_track_id = new_anim.add_track(Animation.TYPE_VALUE)
+		var offset_v = Vector2(0,0)
+		new_anim.track_set_path(offset_track_id, track+":offset")
+		new_anim.value_track_set_update_mode(offset_track_id, Animation.UPDATE_DISCRETE)
+		match direction:
+			"Down": offset_v.y = offset
+			"Up": offset_v.y = -offset
+			"Right": offset_v.x = offset
+			"Left": offset_v.x = -offset
+		offset_v = offset_v + spriteOffset
+		if "init_offset" in layer_data:
+			offset_v.x += track_data.init_offset.x
+			offset_v.y += track_data.init_offset.y
+		new_anim.track_insert_key(offset_track_id, 0, offset_v)
 
 func addRotationTrack(new_anim, track, track_data, direction_data, animation, layer_data):
 	var rotation = []
