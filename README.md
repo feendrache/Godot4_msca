@@ -46,6 +46,10 @@ I will try to explain the MSCA to you in the following pages:
 - [Test-Scene](docs/TestScene.md)
 
 ## DevLog
+### 1.0.1
+- minor Bugfix for fishing anim
+### 1.0.0
+- updates for 4.3 compability
 ### 0.9.6
 - small changes for better understanding
 ### 0.9.5
