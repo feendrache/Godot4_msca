@@ -3450,7 +3450,7 @@
 				"FishingPullLine"
 			],
 			"transition_switch_mode": "AtEnd",
-			"transition_auto_advance": false,
+			"transition_auto_advance": true,
 			"make_sound": {
 				"frames": [
 					0,
