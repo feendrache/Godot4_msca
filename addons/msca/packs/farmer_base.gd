@@ -66,7 +66,7 @@ func addTransitions():
 			var transition = AnimationNodeStateMachineTransition.new()	
 			transition.switch_mode = switch_mode
 			if first && animation.transition_auto_advance == true:
-				transition.auto_advance = true
+				transition.advance_mode = AnimationNodeStateMachineTransition.ADVANCE_MODE_AUTO
 			if from != to:
 				animationTree.get_tree_root().add_transition(from, to, transition)
 			first = false
