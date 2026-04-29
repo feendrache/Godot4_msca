@@ -1,6 +1,6 @@
 class_name MSCAPaletteSwaps
 
-func change_image_colors(image, old_palette, new_palette, debug_text = "") -> Image:
+static func change_image_colors(image, old_palette, new_palette, debug_text = "") -> Image:
 	if image != null:
 		# Get the size of the image
 		var image_width = image.get_width()
@@ -21,25 +21,25 @@ func change_image_colors(image, old_palette, new_palette, debug_text = "") -> Im
 		return new_image
 	return null
 
-func create_html_palette_from_image(image) ->Array:
+static func create_html_palette_from_image(image) ->Array:
 	var palette = create_palette_from_image(image)
 	return color_to_html_palette(palette)
 
-func color_to_html_palette(palette) -> Array:
+static func color_to_html_palette(palette) -> Array:
 	var html_palette = []
 	for p in palette:
 		if p is Color: html_palette.append("#"+p.to_html(true))
 		else: html_palette.append(p)
 	return html_palette
 
-func html_to_color_palette(palette) -> Array:
+static func html_to_color_palette(palette) -> Array:
 	var color_palette = []
 	for p in palette:
 		if p is Color: color_palette.append(p)
 		else: color_palette.append(Color(p))
 	return color_palette
 
-func create_palette_from_image(image) ->Array:
+static func create_palette_from_image(image) ->Array:
 	if image == null: return []
 	var palette:Array
 	# Get the size of the image
@@ -58,10 +58,10 @@ func create_palette_from_image(image) ->Array:
 		old_color = color
 	return palette
 
-func create_palette_from_texture(node_texture) ->Array:
+static func create_palette_from_texture(node_texture) ->Array:
 	return create_palette_from_image(node_texture.get_image())
 
-func get_pos_in_palette(palette, color)->int:
+static func get_pos_in_palette(palette, color)->int:
 	var pos = 0
 	var found:bool
 	for c in palette:
@@ -70,7 +70,7 @@ func get_pos_in_palette(palette, color)->int:
 		pos = pos + 1
 	return -1
 
-func get_combined_image(img1, img2)->Image:
+static func get_combined_image(img1, img2)->Image:
 	var size1 = img1.get_size()
 	var size2 = img2.get_size()
 	var new_size = Vector2(size1.x+size2.x,size1.y)
