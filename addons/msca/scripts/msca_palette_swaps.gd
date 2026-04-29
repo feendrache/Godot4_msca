@@ -1,17 +1,6 @@
 class_name MSCAPaletteSwaps
 
-static func create_shader_material(original_palette, use_palette)->ShaderMaterial:
-	var shader_material = ShaderMaterial.new()
-	var shader = load("res://addons/msca/shader/simple_ramp_shader.gdshader")
-	shader_material.shader = shader
-	var p_count = 0
-	for p in use_palette:
-		shader_material.set_shader_parameter("original_"+str(p_count),original_palette[p_count])
-		shader_material.set_shader_parameter("replace_"+str(p_count),p)
-		p_count = p_count +1
-	return shader_material
-
-static func change_image_colors(image, old_palette, new_palette, debug_text = "") -> Image:
+func change_image_colors(image, old_palette, new_palette, debug_text = "") -> Image:
 	if image != null:
 		# Get the size of the image
 		var image_width = image.get_width()
@@ -32,43 +21,47 @@ static func change_image_colors(image, old_palette, new_palette, debug_text = ""
 		return new_image
 	return null
 
-static func create_html_palette_from_image(image) ->Array:
+func create_html_palette_from_image(image) ->Array:
 	var palette = create_palette_from_image(image)
 	return color_to_html_palette(palette)
 
-static func color_to_html_palette(palette) -> Array:
+func color_to_html_palette(palette) -> Array:
 	var html_palette = []
 	for p in palette:
 		if p is Color: html_palette.append("#"+p.to_html(true))
 		else: html_palette.append(p)
 	return html_palette
 
-static func html_to_color_palette(palette) -> Array:
+func html_to_color_palette(palette) -> Array:
 	var color_palette = []
 	for p in palette:
 		if p is Color: color_palette.append(p)
 		else: color_palette.append(Color(p))
 	return color_palette
 
-static func create_palette_from_image(image) ->Array:
+func create_palette_from_image(image) ->Array:
 	if image == null: return []
 	var palette:Array
 	# Get the size of the image
 	var image_width = image.get_width()
 	var image_height = image.get_height()
+
 	# Iterate over the pixel data
-	for y in range(image_height):
-		for x in range(image_width):
-			var color = image.get_pixel(x,y)
-			if color.a > 0:
-				if !palette.has(color):
-					palette.append(color)
+	var y = 0
+	#for y in range(image_height):
+	var old_color
+	for x in range(image_width):
+		var color = image.get_pixel(x,y)
+		if color.a > 0:
+			if color != old_color || !palette.has(color):
+				palette.append(color)
+		old_color = color
 	return palette
 
-static func create_palette_from_texture(node_texture) ->Array:
+func create_palette_from_texture(node_texture) ->Array:
 	return create_palette_from_image(node_texture.get_image())
 
-static func get_pos_in_palette(palette, color)->int:
+func get_pos_in_palette(palette, color)->int:
 	var pos = 0
 	var found:bool
 	for c in palette:
@@ -77,7 +70,7 @@ static func get_pos_in_palette(palette, color)->int:
 		pos = pos + 1
 	return -1
 
-static func get_combined_image(img1, img2)->Image:
+func get_combined_image(img1, img2)->Image:
 	var size1 = img1.get_size()
 	var size2 = img2.get_size()
 	var new_size = Vector2(size1.x+size2.x,size1.y)
