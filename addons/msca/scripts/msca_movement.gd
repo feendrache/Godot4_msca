@@ -7,7 +7,7 @@ var velocity = Vector2.ZERO
 
 @export var movement_anim:String = "Walk"
 @export var enabled:bool = true
-@onready var player = get_parent()
+@onready var player:MSCAPlayer = get_parent()
 
 func _physics_process(delta):
 	if enabled: move_player(delta)

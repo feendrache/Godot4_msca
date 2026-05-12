@@ -143,6 +143,7 @@ func addLastTracks(new_anim, animation, animation_name, anim_length):
 	}
 	new_anim.track_insert_key(signal_emitter_track_id, first_frame, start_method_params)
 	#new_anim.value_track_set_update_mode(signal_emitter_track_id, Animation.UPDATE_DISCRETE)
+	#new_anim.track_set_interpolation_type(signal_emitter_track_id, Animation.INTERPOLATION_NEAREST)
 	var method_params = {
 		"method" : "emit_animation_state_finished",
 		"args" : [animation_name, anim_length]
@@ -180,6 +181,7 @@ func addSpritesheetTrack(new_anim, track, track_data, direction_data, animation,
 		var spritesheet_track_id = new_anim.add_track(Animation.TYPE_VALUE)
 		new_anim.track_set_path(spritesheet_track_id, track+":texture")
 		new_anim.value_track_set_update_mode(spritesheet_track_id, Animation.UPDATE_DISCRETE)
+		new_anim.track_set_interpolation_type(spritesheet_track_id, Animation.INTERPOLATION_NEAREST)
 		if "spritesheet" in track_data:
 			new_anim.track_insert_key(spritesheet_track_id, 0, load(base_path+track_data.spritesheet))
 		elif "spritesheet" in layer_data:
@@ -204,8 +206,10 @@ func addHVFramesTracks(new_anim, track, track_data, direction_data, animation, l
 	var vframes_track_id = new_anim.add_track(Animation.TYPE_VALUE)
 	new_anim.track_set_path(hframes_track_id, track+":hframes")
 	new_anim.value_track_set_update_mode(hframes_track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_interpolation_type(hframes_track_id, Animation.INTERPOLATION_NEAREST)
 	new_anim.track_set_path(vframes_track_id, track+":vframes")
 	new_anim.value_track_set_update_mode(vframes_track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_interpolation_type(vframes_track_id, Animation.INTERPOLATION_NEAREST)
 	if "size" in track_data:
 		new_anim.track_insert_key(hframes_track_id, 0, track_data.size.h)
 		new_anim.track_insert_key(vframes_track_id, 0, track_data.size.v)
@@ -231,6 +235,7 @@ func addOffsetTrack(new_anim, track, track_data, direction_data, animation, dire
 		var offset_v = Vector2(0,0)
 		new_anim.track_set_path(offset_track_id, track+":offset")
 		new_anim.value_track_set_update_mode(offset_track_id, Animation.UPDATE_DISCRETE)
+		new_anim.track_set_interpolation_type(offset_track_id, Animation.INTERPOLATION_NEAREST)
 		for off in has_offset:
 			off = off
 			if "skip_offset" in track_data: offset_v = Vector2(off.x, off.y)
@@ -244,6 +249,7 @@ func addOffsetTrack(new_anim, track, track_data, direction_data, animation, dire
 		var offset_v = Vector2(0,0)
 		new_anim.track_set_path(offset_track_id, track+":offset")
 		new_anim.value_track_set_update_mode(offset_track_id, Animation.UPDATE_DISCRETE)
+		new_anim.track_set_interpolation_type(offset_track_id, Animation.INTERPOLATION_NEAREST)
 		match direction:
 			"Down": offset_v.y = offset
 			"Up": offset_v.y = -offset
@@ -267,6 +273,7 @@ func addRotationTrack(new_anim, track, track_data, direction_data, animation, la
 	var rotation_track_id = new_anim.add_track(Animation.TYPE_VALUE)
 	new_anim.track_set_path(rotation_track_id, track+":rotation")
 	new_anim.value_track_set_update_mode(rotation_track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_interpolation_type(rotation_track_id, Animation.INTERPOLATION_NEAREST)
 	for rot in rotation:
 		new_anim.track_insert_key(rotation_track_id, timer_value, deg_to_rad(rot))
 		timer_value = timer_value + animation.timer[counter]
@@ -276,6 +283,7 @@ func addSortingTrack(new_anim, track, track_data, direction_data, animation, lay
 	var sorting_track_id = new_anim.add_track(Animation.TYPE_METHOD)
 	new_anim.track_set_path(sorting_track_id,".")
 	#new_anim.value_track_set_update_mode(sorting_track_id, Animation.UPDATE_DISCRETE)
+	#new_anim.track_set_interpolation_type(sorting_track_id, Animation.INTERPOLATION_NEAREST)
 	var timer_value = 0
 	var counter = 0
 	for sort in track_data.sorting:
@@ -289,8 +297,7 @@ func addSortingTrack(new_anim, track, track_data, direction_data, animation, lay
 
 func addHitBoxTrack(new_anim, track, track_data, direction, animation, layer_data):
 	var hitbox_track_id = new_anim.add_track(Animation.TYPE_METHOD)
-	new_anim.track_set_path(hitbox_track_id,".")
-	#new_anim.value_track_set_update_mode(sorting_track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_path(hitbox_track_id,".")	
 	var timer_value = 0
 	var counter = 0
 	for frame in track_data.frames:
@@ -306,6 +313,7 @@ func addFlipTracks(new_anim, track, track_data, direction_data, animation, layer
 	var track_id = new_anim.add_track(Animation.TYPE_VALUE)
 	new_anim.track_set_path(track_id, track+":flip_h")
 	new_anim.value_track_set_update_mode(track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_interpolation_type(track_id, Animation.INTERPOLATION_NEAREST)
 	var counter = 0
 	var timer_value = 0
 	var flips = get_false_array(animation.timer.size())
@@ -320,6 +328,7 @@ func addFlipTracks(new_anim, track, track_data, direction_data, animation, layer
 	track_id = new_anim.add_track(Animation.TYPE_VALUE)
 	new_anim.track_set_path(track_id, track+":flip_v")
 	new_anim.value_track_set_update_mode(track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_interpolation_type(track_id, Animation.INTERPOLATION_NEAREST)
 	counter = 0
 	timer_value = 0
 	var vflips = get_false_array(animation.timer.size())
@@ -336,6 +345,7 @@ func addFramesTrack(new_anim, track, track_data, direction_data, animation, laye
 	var track_id = new_anim.add_track(Animation.TYPE_VALUE)
 	new_anim.track_set_path(track_id, track+":frame")
 	new_anim.value_track_set_update_mode(track_id, Animation.UPDATE_DISCRETE)
+	new_anim.track_set_interpolation_type(track_id, Animation.INTERPOLATION_NEAREST)
 	var counter = 0
 	var timer_value = 0
 	var frames = []
